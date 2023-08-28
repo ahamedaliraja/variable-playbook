@@ -1,3 +1,5 @@
 servera.lab.example.com
 [prod]
 serverc.lab.example.com
+[prod1]
+serverd.lab.example.com

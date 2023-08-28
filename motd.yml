@@ -1,0 +1,13 @@
+---
+- name: MOTD Banner
+  hosts: prod
+  vars:
+    Directory: /etc/motd.d
+    File: Banner
+    Content: This is my Banner
+  tasks:
+    - name: Motd Task
+      ansible.builtin.lineinfile:
+        path: "{{ Directory }}/{{ File }}"
+        line: "{{ Content }}"
+        create: yes

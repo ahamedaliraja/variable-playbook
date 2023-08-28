@@ -1,0 +1,13 @@
+---
+- name: MOTD Banner
+  hosts: prod1
+  vars:
+    Directory: /etc/motd.d
+    File: Banner
+    Content: This is my Banner Message2
+  tasks:
+    - name: Motd Task
+      ansible.builtin.copy:
+        dest: "{{ Directory }}/{{ File }}"
+        content: "{{ Content }}"
+        force: yes
